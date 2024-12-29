@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files</title>
+    <link rel="stylesheet" href="dist/all.min.css" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="font-open-sans">
+    <div class="bg-[#f1f5f9] min-h-screen flex">
+      <div class="sidebar bg-white p-[10px] sm:p-5 relative w-[58px] sm:w-[200px] shadow-lg">
+
+        <h3 class="sticky top-5 left-0 text-xs sm:text-2xl font-bold text-center mt-0 mb-4 sm:mb-12">ELASY</h3>
+
+        <ul class="sticky top-28 left-0">
+          <li>
+            <a class="sideLink" href="index.html">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="settings.html">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="profile.html">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="projects.html">
+              <i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="courses.html">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="friends.html">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+          <li>
+            <a class="active sideLink" href="files.html">
+              <i class="fa-regular fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="plans.html">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content overflow-visible w-[calc(100%-58px)] sm:w-[calc(100%-200px)]">
+        <!-- Start Head -->
+        <div class="head  sticky top-0 z-20 bg-white p-4 between-flex">
+          <div class="search relative">
+            <input class="p-[10px]" type="search" placeholder="Type A Keyword" />
+          </div>
+
+          <div class="icons flex items-center gap-5">
+            <span class="notification relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="imgs/avatar.jpeg" class="w-10 h-10" alt="" />
+          </div>
+        </div>
+        <!-- End Head -->
+
+        <h1 class="main-title relative m-5 mb-10">
+          Files
+        </h1>
+
+        <div 
+          class="files-page flex flex-col md:flex-row-reverse md:items-start m-2 lg:m-5 gap-2 lg:gap-5"
+        >
+          <div class="files-stats min-w-[250px] p-5 bg-white rounded-lg">
+            <h2 class="mt-0 mb-4 text-center sm:text-start">Files Statistics</h2>
+            <div class="box">
+              <i class="fa-regular fa-file-pdf fa-lg bg-blue-500/20 text-blue-color icon"></i>
+              <div class="info">
+                <span>PDF Files</span>
+                <span>130</span>
+              </div>
+              <div class="size">6.5GB</div>
+            </div>
+            <div class="box">
+              <i class="fa-regular fa-images fa-lg bg-green-500/20 text-green-color icon"></i>
+              <div class="info">
+                <span>Images</span>
+                <span>115 Files</span>
+              </div>
+              <div class="size">3.5GB</div>
+            </div>
+            <div class="box">
+              <i class="fa-regular fa-file-word fa-lg bg-red-500/20 text-red-color icon"></i>
+              <div class="info">
+                <span>Word Files</span>
+                <span>110 Files</span>
+              </div>
+              <div class="size">3.2GB</div>
+            </div>
+            <div class="box">
+              <i class="fa-solid fa-file-csv fa-lg bg-orange-500/20 text-orange-color icon"></i>
+              <div class="info">
+                <span>CSV Files</span>
+                <span>99 Files</span>
+              </div>
+              <div class="size">2.9GB</div>
+            </div>
+            <a class="upload" href="#">
+              <i class="fa-solid fa-angles-up me-2 animate-bounce"></i>
+              Upload
+            </a>
+          </div>
+          <div class="files-content grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5 flex-1">
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img  src="imgs/avi.svg" alt="" />
+              </div>
+              <div class="title">my-file.avi</div>
+              <p class="disc">Admin</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>12.5MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/eps.svg" alt="" />
+              </div>
+              <div class="title">my-file.eps</div>
+              <p class="disc">Uploader</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.7MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/psd.svg" alt="" />
+              </div>
+              <div class="title">my-file.psd</div>
+              <p class="disc">Osama</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>15.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/dll.svg" alt="" />
+              </div>
+              <div class="title">my-file.dll</div>
+              <p class="disc">Coder</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.2MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/png.svg" alt="" />
+              </div>
+              <div class="title">my-file.png</div>
+              <p class="disc">Designer</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>1.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/dll.svg" alt="" />
+              </div>
+              <div class="title">my-file.dll</div>
+              <p class="disc">Coder</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.2MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/png.svg" alt="" />
+              </div>
+              <div class="title">my-file.png</div>
+              <p class="disc">Designer</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>1.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/psd.svg" alt="" />
+              </div>
+              <div class="title">my-file.psd</div>
+              <p class="disc">Osama</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>15.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/pdf.svg" alt="" />
+              </div>
+              <div class="title">my-file.pdf</div>
+              <p class="disc">Elzero</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>5.5MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/avi.svg" alt="" />
+              </div>
+              <div class="title">my-file.avi</div>
+              <p class="disc">Admin</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>12.5MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/eps.svg" alt="" />
+              </div>
+              <div class="title">my-file.eps</div>
+              <p class="disc">Uploader</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.7MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/pdf.svg" alt="" />
+              </div>
+              <div class="title">my-file.pdf</div>
+              <p class="disc">Elzero</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>5.5MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/avi.svg" alt="" />
+              </div>
+              <div class="title">my-file.avi</div>
+              <p class="disc">Admin</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>12.5MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/eps.svg" alt="" />
+              </div>
+              <div class="title">my-file.eps</div>
+              <p class="disc">Uploader</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.7MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/psd.svg" alt="" />
+              </div>
+              <div class="title">my-file.psd</div>
+              <p class="disc">Osama</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>15.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/dll.svg" alt="" />
+              </div>
+              <div class="title">my-file.dll</div>
+              <p class="disc">Coder</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.2MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/png.svg" alt="" />
+              </div>
+              <div class="title">my-file.png</div>
+              <p class="disc">Designer</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>1.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/dll.svg" alt="" />
+              </div>
+              <div class="title">my-file.dll</div>
+              <p class="disc">Coder</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.2MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/png.svg" alt="" />
+              </div>
+              <div class="title">my-file.png</div>
+              <p class="disc">Designer</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>1.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/png.svg" alt="" />
+              </div>
+              <div class="title">my-file.png</div>
+              <p class="disc">Designer</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>1.1MB</span>
+              </div>
+            </div>
+            <div class="file">
+              <i class="fa-solid fa-download text-grey-color"></i>
+              <div class="icon">
+                <img src="imgs/dll.svg" alt="" />
+              </div>
+              <div class="title">my-file.dll</div>
+              <p class="disc">Coder</p>
+              <div class="info">
+                <span>16/5/2021</span>
+                <span>2.2MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

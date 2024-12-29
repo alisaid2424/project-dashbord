@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="dist/all.min.css" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="font-open-sans">
+    <div class="bg-[#f1f5f9] min-h-screen flex">
+      <div class="sidebar bg-white p-[10px] sm:p-5 relative w-[58px] sm:w-[200px] shadow-lg">
+
+        <h3 class="sticky top-5 left-0 text-xs sm:text-2xl font-bold text-center mt-0 mb-4 sm:mb-12">ELASY</h3>
+
+        <ul class="sticky top-28 left-0">
+          <li>
+            <a class="sideLink" href="index.html">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="settings.html">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="profile.html">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="projects.html">
+              <i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="active sideLink" href="courses.html">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="friends.html">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="files.html">
+              <i class="fa-regular fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li>
+            <a class="sideLink" href="plans.html">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content overflow-visible w-[calc(100%-58px)] sm:w-[calc(100%-200px)]">
+        <!-- Start Head -->
+        <div class="head  sticky top-0 z-20 bg-white p-4 between-flex">
+          <div class="search relative">
+            <input class="p-[10px]" type="search" placeholder="Type A Keyword" />
+          </div>
+
+          <div class="icons flex items-center gap-5">
+            <span class="notification relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="imgs/avatar.jpeg" class="w-10 h-10" alt="" />
+          </div>
+        </div>
+        <!-- End Head -->
+
+        <h1 class="main-title relative m-5 mb-10">
+          Courses
+        </h1>
+
+        <div class="courses-page grid md:grid-cols-2 lg:grid-cols-3 m-5 gap-4">
+
+          <div class="course">
+            <img class="cover" src="imgs/course-01.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-01.png" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Mastering Web Design</h4>
+              <p class="description">
+                Master The Art Of Web Designing And Mocking, Prototyping And Creating Web Design Architecture
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color">
+                <i class="fa-regular fa-user"></i>
+                950
+              </span>
+              <span class="text-grey-color">
+                <i class="fa-solid fa-dollar-sign"></i>
+                165
+              </span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-02.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-02.png" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Data Structure And Algorithms</h4>
+              <p class="description">
+                Master The Art Of Data Strcuture And Famous Algorithms Like Sorting, Dividing And Conquering
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 1150</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 210</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-03.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-03.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Responsive Web Design</h4>
+              <p class="description">
+                Mastering Responsive Web Design And Media Queries And Know Everything About Breakpoints
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 650</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 90</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-04.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-04.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Mastering Python</h4>
+              <p class="description">
+                Master The Art Of Data Strcuture And Famous Algorithms Like Sorting, Dividing And Conquering
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 950</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 250</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-05.png" alt="" />
+            <img class="instructor" src="imgs/team-05.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">PHP Examples</h4>
+              <p class="description">
+                PHP Tutorials And Examples And Practice On Web Application And Connecting With Databases
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 850</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 150</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-01.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-01.png" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Data Structure And Algorithms</h4>
+              <p class="description">
+                Master The Art Of Data Strcuture And Famous Algorithms Like Sorting, Dividing And Conquering
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 1150</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 210</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-02.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-02.png" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Responsive Web Design</h4>
+              <p class="description">
+                Mastering Responsive Web Design And Media Queries And Know Everything About Breakpoints
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 650</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 90</span>
+            </div>
+          </div>
+          
+          <div class="course">
+            <img class="cover" src="imgs/course-03.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-03.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Mastering Web Design</h4>
+              <p class="description">
+                Master The Art Of Web Designing And Mocking, Prototyping And Creating Web Design Archticture
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 850</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 145</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-04.jpeg" alt="" />
+            <img class="instructor" src="imgs/team-04.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">PHP Examples</h4>
+              <p class="description">
+                PHP Tutorials Master The Art Of Data Strcuture And Famous Algorithms Like Sorting, Dividing 
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 850</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 150</span>
+            </div>
+          </div>
+
+          <div class="course">
+            <img class="cover" src="imgs/course-05.png" alt="" />
+            <img class="instructor" src="imgs/team-05.jpeg" alt="" />
+            <div class="p-5">
+              <h4 class="m-0">Mastering Python</h4>
+              <p class="description">
+                PHP Tutorials Master The Art Of Data Strcuture And Famous Algorithms Like Sorting, Dividing 
+              </p>
+            </div>
+            <div class="info">
+              <span class="title">Course Info</span>
+              <span class="text-grey-color"> <i class="fa-regular fa-user"></i> 950</span>
+              <span class="text-grey-color"><i class="fa-solid fa-dollar-sign"></i> 250</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
