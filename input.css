@@ -2,335 +2,522 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    /*Start Components */
-    .main-title::before{
-        content: "";
-        @apply absolute bottom-[-10px] left-0 h-[3px] bg-white w-[120px];
-    }
-    .main-title::after{
-        content: "";
-        @apply absolute bottom-[-10px] left-0 h-[3px] bg-black w-[50px] z-[2];
-    }
+@layer components {
+  /*Start Components */
+  .main-title::before {
+    content: "";
+    @apply absolute bottom-[-10px] left-0 h-[3px] bg-white w-[120px];
+  }
+  .main-title::after {
+    content: "";
+    @apply absolute bottom-[-10px] left-0 h-[3px] bg-black w-[50px] z-[2];
+  }
 
-    .toggle-checkbox {@apply appearance-none;}
-    .toggle-switch {
-        @apply bg-[#ccc] w-[78px] h-8 rounded-2xl relative cursor-pointer transition-all duration-300;
-    }
-    .toggle-switch::before {
-        font-family: var(--fa-style-family-classic);
-        content: "\f00d";
-        @apply font-[900] bg-white w-6 h-6 absolute rounded-full top-1 left-1 flex items-center justify-center text-[#aaa] transition-all duration-300 ;
-    }
-    .toggle-checkbox:checked + .toggle-switch {@apply bg-blue-color }
-    .toggle-checkbox:checked + .toggle-switch::before {
-        content: "\f00c";
-        @apply left-[50px] text-blue-color ;
-    }
+  .toggle-checkbox {
+    @apply appearance-none;
+  }
+  .toggle-switch {
+    @apply bg-[#ccc] w-[78px] h-8 rounded-2xl relative cursor-pointer transition-all duration-300;
+  }
+  .toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    @apply font-[900] bg-white w-6 h-6 absolute rounded-full top-1 left-1 flex items-center justify-center text-[#aaa] transition-all duration-300;
+  }
+  .toggle-checkbox:checked + .toggle-switch {
+    @apply bg-blue-color;
+  }
+  .toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    @apply left-[50px] text-blue-color;
+  }
 
-    /* Start Training Code */
-    .profile-page .info-box .toggle-switch {@apply h-5;}
-    .profile-page .info-box .toggle-switch {@apply m-auto sm:m-0 ;}
-    .profile-page .info-box .toggle-switch::before {@apply w-3 h-3 text-[8px];}
-    .profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {@apply left-[62px];}
-    /* End Training Code */
-    .between-flex {@apply flex items-center justify-between;}
-    .center-flex{@apply flex justify-center items-center}
-    .btn-shape{ @apply py-1 px-[10px] rounded-md;}
-    /*End Components */
-    /*  Start sidebar  */
-    .sidebar > h3::before,
-    .sidebar > h3::after {
-        content: "";
-        @apply hidden sm:block bg-black absolute left-1/2 -translate-x-1/2  ;
-    }
-    .sidebar > h3::before { @apply w-20 h-[2px] bottom-[-20px];}
-    .sidebar > h3::after {@apply w-5 h-5 rounded-full border-4 border-white bottom-[-29px];}
-    .sideLink{
-        @apply flex items-center gap-3  text-sm text-black rounded-md p-[10px] 
+  /* Start Training Code */
+  .profile-page .info-box .toggle-switch {
+    @apply h-5;
+  }
+  .profile-page .info-box .toggle-switch {
+    @apply m-auto sm:m-0;
+  }
+  .profile-page .info-box .toggle-switch::before {
+    @apply w-3 h-3 text-[8px];
+  }
+  .profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {
+    @apply left-[62px];
+  }
+  /* End Training Code */
+  .between-flex {
+    @apply flex items-center justify-between;
+  }
+  .center-flex {
+    @apply flex justify-center items-center;
+  }
+  .btn-shape {
+    @apply py-1 px-[10px] rounded-md;
+  }
+  /*End Components */
+  /*  Start sidebar  */
+  .sidebar > h3::before,
+  .sidebar > h3::after {
+    content: "";
+    @apply hidden sm:block bg-black absolute left-1/2 -translate-x-1/2;
+  }
+  .sidebar > h3::before {
+    @apply w-20 h-[2px] bottom-[-20px];
+  }
+  .sidebar > h3::after {
+    @apply w-5 h-5 rounded-full border-4 border-white bottom-[-29px];
+  }
+  .sideLink {
+    @apply flex items-center gap-3  text-sm text-black rounded-md p-[10px] 
         hover:bg-[#f6f6f6] mb-2 transition-all duration-300;
-    }
-    .sidebar ul li a.active{@apply bg-[#f6f6f6] }
-    .sidebar ul li a span{@apply hidden sm:block}
-    /*  End sidebar  */
-    /*  Start Header  */
-    .head .search::before {
-        font-family: 'Font Awesome 5 Free';
-        content: "\f002";
-        @apply font-[900] absolute left-4 top-1/2 -translate-y-1/2 text-sm text-grey-color;
-    }
-    .head .search input {@apply border border-gray-300 rounded-lg ms-2 ps-8  w-[160px] focus:w-[200px]  focus:outline-none focus:placeholder:opacity-0 transition-all duration-300;
-    }
-    .head .icons .notification::before {
-        content: "";
-        @apply absolute w-3 h-3 bg-green-color rounded-full top-[-5px] right-[-5px] ;
-    }
-    /*  End Header  */
-    /* Start Welcome Widget */
-    .welcome .body > div {@apply flex-1;}
-    .welcome .body > div span {@apply block text-grey-color text-sm mt-3;}
-    .welcome .visit {
-        @apply block text-sm bg-blue-color m-4 ms-auto text-white w-fit hover:bg-blue-alt-color transition-all duration-300;
-    }
-    /* End Welcome Widget */
-    /* Start Quick Draft Widget */
-    .input-draft{
-        @apply block mb-5 w-full p-3 border-none bg-[#eee] rounded-md focus:outline-none;
-    }
-    .quick-draft .save{
-        @apply block text-sm bg-blue-color text-white border-none w-fit cursor-pointer ms-auto hover:bg-blue-alt-color transition-all duration-300 ;
-    }
-    /* End Quick Draft Widget */
-    /* Start Targets Widget */
-    .targets .target-row .icon {@apply w-20 h-20 me-4;}
-    .targets .details .progress > span {@apply absolute left-0 top-0 h-full;}
-    .targets .details .progress > span span {@apply absolute bottom-4 -right-5 text-white py-1 px-2 rounded-md text-xs ;
-    }
-    .targets .details .progress > span span::after {
-        content: "";
-        @apply border-8 border-transparent absolute -bottom-4 left-1/2  -translate-x-1/2  ;
-    }
-    .targets .details .progress > .blue span::after {@apply border-t-blue-color  ; }
-    .targets .details .progress > .orange span::after {@apply border-t-orange-color ; }
-    .targets .details .progress > .green span::after {@apply border-t-green-color ;}
-    .blue .icon,.blue .progress {@apply bg-blue-500/20 ;}
-    .orange .icon,.orange .progress {@apply bg-yellow-500/20; }
-    .green .icon,.green .progress {@apply bg-green-500/20;}
-    /* End Targets Widget */
-    /* Start Ticket Widget */
-    .tickets .box {@apply border border-gray-300 w-full sm:w-[calc(50%-10px)];}
-    /* End Ticket Widget */
-    /* Start Latest News Widget */
-    .latest-news .news-row{@apply flex flex-col  items-center sm:flex-row  gap-5;}
-    .latest-news .news-row:not(:last-of-type) {@apply mb-5 pb-5 border-b border-[#eee];}
-    .latest-news .news-row img {@apply w-[100px] h-[60px] rounded-md;}
-    /* End Latest News Widget */
-    /* Start Tasks Widget */
-    .tasks .task-row:not(:last-of-type) {@apply mb-4 pb-4 border-b border-[#eee];}
-    .tasks .delete {@apply cursor-pointer hover:text-red-color transition-all duration-300 ;}
-    /* End Tasks Widget */
-    /* Start Last Project Progress Widget */
-    .last-project ul::before {
-        content: "";
-        @apply absolute left-[10px] w-[2px] h-full bg-blue-color ;
-    }
-    .last-project ul li::before {
-        content: "";
-        @apply w-5 h-5 block rounded-full bg-white border-2 border-white outline  outline-2 
-        outline-blue-color mr-3 z-[2] cursor-pointer ;
-    }
-    .last-project ul li.done::before {@apply bg-blue-color;}
-    .last-project ul li.current::before {@apply animate-changeColor;}
-    /* End Last Project Progress Widget */
-    /* Start Reminders Widget */
-    .reminders ul li .key {@apply w-4 h-4 mr-3 block rounded-full ;}
-    /* End Reminders Widget */
-    /*  Start Latest Post Widget */
-    .latest-post .post-content{
-        @apply text-center sm:text-start py-5 my-5 capitalize leading-[1.8] border-y border-secandry min-h-[140px];
-    }
-    /* End Latest Post Widget */
-    /* Start Social Media Stats Widget */
-    .social-media .box{@apply p-4 ps-[70px] relative mb-[10px] between-flex;}
-    .social-media .box i {
-        @apply absolute  left-0 top-0 w-[52px] text-white h-full center-flex cursor-pointer hover:rotate-6 transition-all duration-300;
-    }
-    .social-media .box a{
-        @apply text-xs text-white btn-shape;
-    }
-    /* End Social Media Stats Widget */
-    /* Start Projects Table */
-    .projects table td{@apply p-4 transition-all duration-300;}
-    .projects tbody tr {@apply divide-x divide-y divide-secandry;}
-    .projects table tbody tr td:first-child{@apply border-b border-secandry;}
-    .projects tbody tr:hover td {@apply bg-[#faf7f7] cursor-pointer;}
-    .projects table img {@apply w-8 h-8 rounded-full p-[2px] bg-white inline-flex;}
-    .projects table img:not(:first-child) {@apply -ms-4}
-    .projects table .label{@apply text-xs }
-    /* End Projects Table */
+  }
+  .sidebar ul li a.active {
+    @apply bg-[#f6f6f6];
+  }
+  .sidebar ul li a span {
+    @apply hidden sm:block;
+  }
+  /*  End sidebar  */
+  /*  Start Header  */
+  .head .search::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    @apply font-[900] absolute left-4 top-1/2 -translate-y-1/2 text-sm text-grey-color;
+  }
+  .head .search input {
+    @apply border border-gray-300 rounded-lg ms-2 ps-8  w-[160px] focus:w-[200px]  focus:outline-none focus:placeholder:opacity-0 transition-all duration-300;
+  }
+  .head .icons .notification::before {
+    content: "";
+    @apply absolute w-3 h-3 bg-green-color rounded-full top-[-5px] right-[-5px];
+  }
+  /*  End Header  */
+  /* Start Welcome Widget */
+  .welcome .body > div {
+    @apply flex-1;
+  }
+  .welcome .body > div span {
+    @apply block text-grey-color text-sm mt-3;
+  }
+  .welcome .visit {
+    @apply block text-sm bg-blue-color m-4 ms-auto text-white w-fit hover:bg-blue-alt-color transition-all duration-300;
+  }
+  /* End Welcome Widget */
+  /* Start Quick Draft Widget */
+  .input-draft {
+    @apply block mb-5 w-full p-3 border-none bg-[#eee] rounded-md focus:outline-none;
+  }
+  .quick-draft .save {
+    @apply block text-sm bg-blue-color text-white border-none w-fit cursor-pointer ms-auto hover:bg-blue-alt-color transition-all duration-300;
+  }
+  /* End Quick Draft Widget */
+  /* Start Targets Widget */
+  .targets .target-row .icon {
+    @apply w-20 h-20 me-4;
+  }
+  .targets .details .progress > span {
+    @apply absolute left-0 top-0 h-full;
+  }
+  .targets .details .progress > span span {
+    @apply absolute bottom-4 -right-5 text-white py-1 px-2 rounded-md text-xs;
+  }
+  .targets .details .progress > span span::after {
+    content: "";
+    @apply border-8 border-transparent absolute -bottom-4 left-1/2  -translate-x-1/2;
+  }
+  .targets .details .progress > .blue span::after {
+    @apply border-t-blue-color;
+  }
+  .targets .details .progress > .orange span::after {
+    @apply border-t-orange-color;
+  }
+  .targets .details .progress > .green span::after {
+    @apply border-t-green-color;
+  }
+  .blue .icon,
+  .blue .progress {
+    @apply bg-blue-500/20;
+  }
+  .orange .icon,
+  .orange .progress {
+    @apply bg-yellow-500/20;
+  }
+  .green .icon,
+  .green .progress {
+    @apply bg-green-500/20;
+  }
+  /* End Targets Widget */
+  /* Start Ticket Widget */
+  .tickets .box {
+    @apply border border-gray-300 w-full sm:w-[calc(50%-10px)];
+  }
+  /* End Ticket Widget */
+  /* Start Latest News Widget */
+  .latest-news .news-row {
+    @apply flex flex-col  items-center sm:flex-row  gap-5;
+  }
+  .latest-news .news-row:not(:last-of-type) {
+    @apply mb-5 pb-5 border-b border-[#eee];
+  }
+  .latest-news .news-row img {
+    @apply w-[100px] h-[60px] rounded-md;
+  }
+  /* End Latest News Widget */
+  /* Start Tasks Widget */
+  .tasks .task-row:not(:last-of-type) {
+    @apply mb-4 pb-4 border-b border-[#eee];
+  }
+  .tasks .delete {
+    @apply cursor-pointer hover:text-red-color transition-all duration-300;
+  }
+  /* End Tasks Widget */
+  /* Start Last Project Progress Widget */
+  .last-project ul::before {
+    content: "";
+    @apply absolute left-[10px] w-[2px] h-full bg-blue-color;
+  }
+  .last-project ul li::before {
+    content: "";
+    @apply w-5 h-5 block rounded-full bg-white border-2 border-white outline  outline-2 
+        outline-blue-color mr-3 z-[2] cursor-pointer;
+  }
+  .last-project ul li.done::before {
+    @apply bg-blue-color;
+  }
+  .last-project ul li.current::before {
+    @apply animate-changeColor;
+  }
+  /* End Last Project Progress Widget */
+  /* Start Reminders Widget */
+  .reminders ul li .key {
+    @apply w-4 h-4 mr-3 block rounded-full;
+  }
+  /* End Reminders Widget */
+  /*  Start Latest Post Widget */
+  .latest-post .post-content {
+    @apply text-center sm:text-start py-5 my-5 capitalize leading-[1.8] border-y border-secandry min-h-[140px];
+  }
+  /* End Latest Post Widget */
+  /* Start Social Media Stats Widget */
+  .social-media .box {
+    @apply p-4 ps-[70px] relative mb-[10px] between-flex;
+  }
+  .social-media .box i {
+    @apply absolute  left-0 top-0 w-[52px] text-white h-full center-flex cursor-pointer hover:rotate-6 transition-all duration-300;
+  }
+  .social-media .box span {
+    @apply text-xs sm:text-base;
+  }
+  .social-media .box a {
+    @apply text-xs text-white btn-shape;
+  }
+  /* End Social Media Stats Widget */
+  /* Start Projects Table */
+  .projects table td {
+    @apply p-4 transition-all duration-300;
+  }
+  .projects tbody tr {
+    @apply divide-x divide-y divide-secandry;
+  }
+  .projects table tbody tr td:first-child {
+    @apply border-b border-secandry;
+  }
+  .projects tbody tr:hover td {
+    @apply bg-[#faf7f7] cursor-pointer;
+  }
+  .projects table img {
+    @apply w-8 h-8 rounded-full p-[2px] bg-white inline-flex;
+  }
+  .projects table img:not(:first-child) {
+    @apply -ms-4;
+  }
+  .projects table .label {
+    @apply text-xs;
+  }
+  /* End Projects Table */
 
-    /*Start settings page */
-    .close-message{@apply p-2 rounded-md block w-full resize-none border border-secandry outline-0 caret-blue-700 min-h-36;}
-    
-    .settings-page .social-boxes i {@apply w-10 h-10 bg-[#f6f6f6] border border-[#ddd] border-r-0 rounded-[6px_0_0_6px] transition-all duration-300;
-    }
-    .settings-page .social-boxes input {@apply h-10 bg-[#f6f6f6] border border-[#ddd] ps-2 
+  /*Start settings page */
+  .close-message {
+    @apply p-2 rounded-md block w-full resize-none border border-secandry outline-0 caret-blue-700 min-h-36;
+  }
+
+  .settings-page .social-boxes i {
+    @apply w-10 h-10 bg-[#f6f6f6] border border-[#ddd] border-r-0 rounded-[6px_0_0_6px] transition-all duration-300;
+  }
+  .settings-page .social-boxes input {
+    @apply h-10 bg-[#f6f6f6] border border-[#ddd] ps-2 
         focus:outline-0 rounded-[0_6px_6px_0];
-    }
-    .settings-page .social-boxes > div:focus-within i {@apply text-black;}
-    /* check box style */
-    .widgets-control .control input[type="checkbox"] {@apply appearance-none;}
-    .widgets-control .control label {@apply ps-[30px] cursor-pointer relative;}
-    .widgets-control .control label::before,
-    .widgets-control .control label::after {@apply absolute left-0 top-1/2 -mt-[9px] rounded ;}
-    .widgets-control .control label::before {
-        content: "";
-        @apply w-[18px] h-[18px] border-2 border-grey-color;
-    }
-    .widgets-control .control label:hover::before {@apply border-blue-alt-color;}
-    .widgets-control .control label::after {
-        font-family: var(--fa-style-family-classic);
-        content: "\f00c";
-        @apply font-[900] bg-blue-color text-white text-xs w-[18px] h-[18px] flex items-center justify-center scale-0 rotate-[360deg] transition-all duration-300;
-    }
-    .widgets-control .control input[type="checkbox"]:checked + label::after {@apply scale-100;}
-    
-    .backup-control input[type="radio"] {@apply appearance-none;}
-    .backup-control .date label {@apply ps-[30px] cursor-pointer relative;}
-    .backup-control .date label::before {
-        content: "";
-        @apply absolute top-1/2 -mt-[11px] left-0 w-[18px] h-[18px] border-2 border-grey-color rounded-full;
-    }
-    .backup-control .date label::after {
-        content: "";
-        @apply absolute left-[3px] top-[4px] w-3 h-3 bg-blue-color rounded-full scale-0 transition-all duration-300;
-    }
-    .backup-control .date input[type="radio"]:checked + label::before {@apply border-blue-color;}
-    .backup-control .date input[type="radio"]:checked + label::after {@apply scale-100;}
-    .backup-control .servers .server {@apply border-2 border-secandry relative;}
-    .backup-control .servers input[type="radio"]:checked + .server {
-        @apply border-blue-color text-blue-color;
-    }
-    /*End settings page  */
+  }
+  .settings-page .social-boxes > div:focus-within i {
+    @apply text-black;
+  }
+  /* check box style */
+  .widgets-control .control input[type="checkbox"] {
+    @apply appearance-none;
+  }
+  .widgets-control .control label {
+    @apply ps-[30px] cursor-pointer relative;
+  }
+  .widgets-control .control label::before,
+  .widgets-control .control label::after {
+    @apply absolute left-0 top-1/2 -mt-[9px] rounded;
+  }
+  .widgets-control .control label::before {
+    content: "";
+    @apply w-[18px] h-[18px] border-2 border-grey-color;
+  }
+  .widgets-control .control label:hover::before {
+    @apply border-blue-alt-color;
+  }
+  .widgets-control .control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    @apply font-[900] bg-blue-color text-white text-xs w-[18px] h-[18px] flex items-center justify-center scale-0 rotate-[360deg] transition-all duration-300;
+  }
+  .widgets-control .control input[type="checkbox"]:checked + label::after {
+    @apply scale-100;
+  }
 
-    /*start profile page*/
-    .profile-page .avatar-box .rating i {@apply text-orange-color text-sm;}
-    .profile-page .info-box .box {
-        @apply flex-wrap hover:bg-[#f9f9f9] hover:cursor-pointer transition-all duration-300; 
-    }
-    .profile-page .info-box .box > div {@apply basis-full sm:basis-1/2 pt-3 ;}
-    .profile-page .skills-card ul li {@apply py-4;}
-    .profile-page .skills-card ul li span {@apply inline-flex py-1 px-[10px] m-1 bg-secandry rounded-md text-sm;}
-    .profile-page .activities .activity{
-        @apply flex flex-col sm:flex-row items-center text-center sm:text-start;
-    }
-    .profile-page .activity:not(:last-of-type) {@apply border-b border-secandry pb-5 mb-5;}
-    .profile-page .activity img {@apply w-16 h-16 mb-4 me-0 sm:mb-0 sm:me-4 ;}
-    .profile-page .activity .date {@apply mt-4 sm:mt-0 sm:ms-auto sm:text-right;}
-    /*End profile page */
+  .backup-control input[type="radio"] {
+    @apply appearance-none;
+  }
+  .backup-control .date label {
+    @apply ps-[30px] cursor-pointer relative;
+  }
+  .backup-control .date label::before {
+    content: "";
+    @apply absolute top-1/2 -mt-[11px] left-0 w-[18px] h-[18px] border-2 border-grey-color rounded-full;
+  }
+  .backup-control .date label::after {
+    content: "";
+    @apply absolute left-[3px] top-[4px] w-3 h-3 bg-blue-color rounded-full scale-0 transition-all duration-300;
+  }
+  .backup-control .date input[type="radio"]:checked + label::before {
+    @apply border-blue-color;
+  }
+  .backup-control .date input[type="radio"]:checked + label::after {
+    @apply scale-100;
+  }
+  .backup-control .servers .server {
+    @apply border-2 border-secandry relative;
+  }
+  .backup-control .servers input[type="radio"]:checked + .server {
+    @apply border-blue-color text-blue-color;
+  }
+  /*End settings page  */
 
-    /*Start projects page */
-    .projects-page .project{@apply bg-white  p-5 rounded-lg relative;}
-    .projects-page .project .date {@apply absolute right-4 top-7 text-xs text-grey-color ;}
-    .projects-page .project h4 {@apply m-0 font-normal;}
-    .projects-page .project p{@apply text-grey-color mt-3 mb-3 text-sm;}
-    .projects-page .project .team {@apply flex items-end min-h-20;}
-    .projects-page .project .team a {@apply inline-flex ;}
-    .projects-page .project .team a:not(:first-child) {@apply -ms-4}
-    .projects-page .project .team a img {
-        @apply w-10 h-10 rounded-full border-2 border-white hover:z-50 transition-all duration-300;
-    }
-    .projects-page .project .do {
-        @apply justify-end flex-col gap-2 sm:flex-row border-t border-secandry mt-4 pt-4 ; 
-    }
-    .projects-page .project .do span {
-        @apply py-[3px] px-2  w-fit text-xs rounded-md bg-secandry;
-    }
-    .projects-page .project .info {
-        @apply border-t border-secandry mt-4 pt-4 gap-4 sm:gap-0 flex-col sm:flex-row;
-    }
-    .projects-page .project .prog {@apply h-2 w-[260px] relative rounded-md ;}
-    .projects-page .project .prog span {@apply absolute left-0 top-0 h-full rounded-md;}
-    /*End projects page */
+  /*start profile page*/
+  .profile-page .avatar-box .rating i {
+    @apply text-orange-color text-sm;
+  }
+  .profile-page .info-box .box {
+    @apply flex-wrap hover:bg-[#f9f9f9] hover:cursor-pointer transition-all duration-300;
+  }
+  .profile-page .info-box .box > div {
+    @apply basis-full sm:basis-1/2 pt-3;
+  }
+  .profile-page .skills-card ul li {
+    @apply py-4;
+  }
+  .profile-page .skills-card ul li span {
+    @apply inline-flex py-1 px-[10px] m-1 bg-secandry rounded-md text-sm;
+  }
+  .profile-page .activities .activity {
+    @apply flex flex-col sm:flex-row items-center text-center sm:text-start;
+  }
+  .profile-page .activity:not(:last-of-type) {
+    @apply border-b border-secandry pb-5 mb-5;
+  }
+  .profile-page .activity img {
+    @apply w-16 h-16 mb-4 me-0 sm:mb-0 sm:me-4;
+  }
+  .profile-page .activity .date {
+    @apply mt-4 sm:mt-0 sm:ms-auto sm:text-right;
+  }
+  /*End profile page */
 
-    /*Start courses page */
-    .courses-page .course {@apply bg-white rounded-md relative overflow-hidden;}
-    .courses-page .course .cover {@apply w-full max-w-full h-[230px];}
-    .courses-page .course .instructor {
-        @apply absolute w-16 h-16 rounded-full top-5 left-5 border-2 border-white;
-    }
-    .courses-page .course .description {@apply leading-[1.7] text-grey-color mt-4 text-sm;}
-    .courses-page .course .info {
-        @apply p-4 relative between-flex border-t border-secandry mt-3 text-sm;
-    }
-    .courses-page .course .info .title {
-        @apply absolute -top-3 left-1/2 -translate-x-1/2 text-xs bg-blue-color text-white btn-shape;
-    }
-    /*End courses page */
+  /*Start projects page */
+  .projects-page .project {
+    @apply bg-white  p-5 rounded-lg relative;
+  }
+  .projects-page .project .date {
+    @apply absolute right-4 top-7 text-xs text-grey-color;
+  }
+  .projects-page .project h4 {
+    @apply m-0 font-normal;
+  }
+  .projects-page .project p {
+    @apply text-grey-color mt-3 mb-3 text-sm;
+  }
+  .projects-page .project .team {
+    @apply flex items-end min-h-20;
+  }
+  .projects-page .project .team a {
+    @apply inline-flex;
+  }
+  .projects-page .project .team a:not(:first-child) {
+    @apply -ms-4;
+  }
+  .projects-page .project .team a img {
+    @apply w-10 h-10 rounded-full border-2 border-white hover:z-50 transition-all duration-300;
+  }
+  .projects-page .project .do {
+    @apply justify-end flex-col gap-2 sm:flex-row border-t border-secandry mt-4 pt-4;
+  }
+  .projects-page .project .do span {
+    @apply py-[3px] px-2  w-fit text-xs rounded-md bg-secandry;
+  }
+  .projects-page .project .info {
+    @apply border-t border-secandry mt-4 pt-4 gap-4 sm:gap-0 flex-col sm:flex-row;
+  }
+  .projects-page .project .prog {
+    @apply h-2 w-[260px] relative rounded-md;
+  }
+  .projects-page .project .prog span {
+    @apply absolute left-0 top-0 h-full rounded-md;
+  }
+  /*End projects page */
 
-    /*Start friends page */
-    .friends-page .friend {@apply bg-white rounded-md p-5 relative; }
-    .friends-page .contact {@apply absolute left-3 top-3 flex gap-2 ;}
-    .friends-page .contact i {
-    @apply bg-secandry w-8 h-8 p-2 flex items-center justify-center rounded-full text-gray-600 text-xs cursor-pointer hover:bg-blue-color hover:text-white transition-all duration-300 ;
-    }
-    .friends-page .friend .image{@apply rounded-full mt-7 mb-3 mx-auto w-40 h-40; }
-    
-    .friends-page .friend .icons {@apply text-sm relative border-y border-secandry my-4 py-4;}
-    .friends-page .friend .icons i {@apply me-2;}
-    .friends-page .friend .icons .vip {
+  /*Start courses page */
+  .courses-page .course {
+    @apply bg-white rounded-md relative overflow-hidden;
+  }
+  .courses-page .course .cover {
+    @apply w-full max-w-full h-[230px];
+  }
+  .courses-page .course .instructor {
+    @apply absolute w-16 h-16 rounded-full top-5 left-5 border-2 border-white;
+  }
+  .courses-page .course .description {
+    @apply leading-[1.7] text-grey-color mt-4 text-sm;
+  }
+  .courses-page .course .info {
+    @apply p-4 relative between-flex border-t border-secandry mt-3 text-sm;
+  }
+  .courses-page .course .info .title {
+    @apply absolute -top-3 left-1/2 -translate-x-1/2 text-xs bg-blue-color text-white btn-shape;
+  }
+  /*End courses page */
+
+  /*Start friends page */
+  .friends-page .friend {
+    @apply bg-white rounded-md p-5 relative;
+  }
+  .friends-page .contact {
+    @apply absolute left-3 top-3 flex gap-2;
+  }
+  .friends-page .contact i {
+    @apply bg-secandry w-8 h-8 p-2 flex items-center justify-center rounded-full text-gray-600 text-xs cursor-pointer hover:bg-blue-color hover:text-white transition-all duration-300;
+  }
+  .friends-page .friend .image {
+    @apply rounded-full mt-7 mb-3 mx-auto w-40 h-40;
+  }
+
+  .friends-page .friend .icons {
+    @apply text-sm relative border-y border-secandry my-4 py-4;
+  }
+  .friends-page .friend .icons i {
+    @apply me-2;
+  }
+  .friends-page .friend .icons .vip {
     @apply absolute right-0 top-1/2 -translate-y-1/2 text-[40px] opacity-20 font-bold text-orange-color;
-    }
-    .friends-page .friend .info{
+  }
+  .friends-page .friend .info {
     @apply between-flex flex-wrap gap-4 text-xs;
-    }
-    .friends-page .friend .info a{
+  }
+  .friends-page .friend .info a {
     @apply text-white btn-shape;
-    }
-    /*End friends page */
+  }
+  /*End friends page */
 
-    /*Start files page */
-    .files-page .files-stats .icon {@apply w-10 h-10 me-3 center-flex;}
-    .files-page .files-stats .size {@apply text-grey-color ms-auto ;}
-    .files-page .files-stats .box{
+  /*Start files page */
+  .files-page .files-stats .icon {
+    @apply w-10 h-10 me-3 center-flex;
+  }
+  .files-page .files-stats .size {
+    @apply text-grey-color ms-auto;
+  }
+  .files-page .files-stats .box {
     @apply flex items-center border border-secandry p-2 rounded-md mb-4 text-sm;
-    }
-    .files-page .files-stats .box .info span:last-child{@apply text-grey-color block mt-1;}
-    .files-page .files-stats .upload {
+  }
+  .files-page .files-stats .box .info span:last-child {
+    @apply text-grey-color block mt-1;
+  }
+  .files-page .files-stats .upload {
     @apply bg-blue-color text-white text-sm rounded-md block w-fit mt-4 mx-auto py-2 px-3 hover:bg-blue-alt-color transition-all duration-300;
-    }
-    .files-page .files-content .file {@apply bg-white  p-[10px] rounded-lg ;}
-    .files-page .files-content .icon img {@apply w-16 h-16 my-4 mx-auto transition-all duration-300 ;}
-    .files-page .files-content .file:hover img {@apply rotate-6;}
-    .files-page .files-content .file .title{
+  }
+  .files-page .files-content .file {
+    @apply bg-white  p-[10px] rounded-lg;
+  }
+  .files-page .files-content .icon img {
+    @apply w-16 h-16 my-4 mx-auto transition-all duration-300;
+  }
+  .files-page .files-content .file:hover img {
+    @apply rotate-6;
+  }
+  .files-page .files-content .file .title {
     @apply text-center mb-2 text-sm;
-    }
-    .files-page .files-content .file .disc{
+  }
+  .files-page .files-content .file .disc {
     @apply text-grey-color text-xs;
-    }
-    .files-page .files-content .info {
+  }
+  .files-page .files-content .info {
     @apply border-t border-secandry between-flex mt-2 pt-2 text-xs text-grey-color;
-    }
-    /*End files page */
+  }
+  /*End files page */
 
-    
-    /*Start plans page */
-    .plans-page .plan .top{
-    @apply text-center p-5 ring  ring-offset-[3px];
-    }
-    .plans-page .plan .price{@apply relative text-[40px] m-auto w-fit text-white;}
-    .plans-page .plan .price span{@apply absolute top-0 -left-5 text-2xl;}
-    .plans-page .plan ul li {@apply py-4 flex items-center text-base border-b border-secandry;}
-    .plans-page .plan ul li .yes {@apply text-green-color;}
-    .plans-page .plan ul li i:not(.yes, .help) {@apply text-red-color;}
-    .plans-page .plan ul li i:first-child {@apply text-[18px] me-2;}
-    .plans-page .plan ul li .help {@apply text-grey-color ms-auto cursor-pointer;}
-    .plans-page .plan a{
+  /*Start plans page */
+  .plans-page .plan .top {
+    @apply text-center p-2 sm:p-5 ring  ring-offset-[3px];
+  }
+  .plans-page .plan .price {
+    @apply relative text-2xl sm:text-[40px] m-auto w-fit text-white;
+  }
+  .plans-page .plan .price span {
+    @apply absolute top-0 -left-5 text-xl sm:text-2xl;
+  }
+  .plans-page .plan ul li {
+    @apply py-4 flex items-center text-xs sm:text-base border-b border-secandry;
+  }
+  .plans-page .plan ul li .yes {
+    @apply text-green-color;
+  }
+  .plans-page .plan ul li i:not(.yes, .help) {
+    @apply text-red-color;
+  }
+  .plans-page .plan ul li i:first-child {
+    @apply text-base sm:text-[18px] me-2;
+  }
+  .plans-page .plan ul li .help {
+    @apply text-grey-color ms-auto cursor-pointer;
+  }
+  .plans-page .plan a {
     @apply btn-shape  mt-4 text-white block w-fit;
-    }
-    /* End plans page*/
+  }
+  /* End plans page*/
 }
 
 @layer utilities {
-    /* width scrollbar*/
-    ::-webkit-scrollbar {
+  /* width scrollbar*/
+  ::-webkit-scrollbar {
     width: 12px;
-    }
+  }
 
-    /*Handle Track */
-    ::-webkit-scrollbar-track {
+  /*Handle Track */
+  ::-webkit-scrollbar-track {
     background: #fff;
-    }
+  }
 
-    /* Handle thumb*/
-    ::-webkit-scrollbar-thumb {
+  /* Handle thumb*/
+  ::-webkit-scrollbar-thumb {
     background: #0075ff;
     border-radius: 10px;
-    cursor:pointer
-    }
+    cursor: pointer;
+  }
 
-    /* Handle thumb when hovering over track */
-    ::-webkit-scrollbar-thumb:hover {
+  /* Handle thumb when hovering over track */
+  ::-webkit-scrollbar-thumb:hover {
     background: #0d69d5;
-    }
+  }
 }

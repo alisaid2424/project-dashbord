@@ -6,20 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
     <link rel="stylesheet" href="dist/all.min.css" />
-    <link href="./dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="font-open-sans">
     <div class="bg-[#f1f5f9] min-h-screen flex">
-      <div class="sidebar bg-white p-[10px] sm:p-5 relative w-[58px] sm:w-[200px] shadow-lg">
-
-        <h3 class="sticky top-5 left-0 text-xs sm:text-2xl font-bold text-center mt-0 mb-4 sm:mb-12">ELASY</h3>
+      <div
+        class="sidebar bg-white p-[10px] sm:p-5 relative w-[55px] sm:w-[200px] shadow-lg"
+      >
+        <h3
+          class="sticky top-5 left-0 text-xs sm:text-2xl font-bold text-center mt-0 mb-4 sm:mb-12"
+        >
+          ELASY
+        </h3>
 
         <ul class="sticky top-28 left-0">
           <li>
-            <a class=" sideLink" href="index.html">
+            <a class="sideLink" href="index.html">
               <i class="fa-regular fa-chart-bar fa-fw"></i>
               <span>Dashboard</span>
             </a>
@@ -69,11 +77,17 @@
         </ul>
       </div>
 
-      <div class="content overflow-visible w-[calc(100%-58px)] sm:w-[calc(100%-200px)]">
+      <div
+        class="content overflow-visible w-[calc(100%-55px)] sm:w-[calc(100%-200px)]"
+      >
         <!-- Start Head -->
-        <div class="head  sticky top-0 z-20 bg-white p-4 between-flex">
+        <div class="head sticky top-0 z-20 bg-white p-4 between-flex">
           <div class="search relative">
-            <input class="p-[10px]" type="search" placeholder="Type A Keyword" />
+            <input
+              class="p-[10px]"
+              type="search"
+              placeholder="Type A Keyword"
+            />
           </div>
 
           <div class="icons flex items-center gap-5">
@@ -85,18 +99,16 @@
         </div>
         <!-- End Head -->
 
-        <h1 class="main-title relative m-5 mb-10">
-            Settings
-        </h1>
+        <h1 class="main-title relative m-5 mb-10">Settings</h1>
 
-        <div class="settings-page m-5 grid  gap-5">
+        <div class="settings-page grid gap-2 lg:gap-4 m-2 sm:m-5">
           <!-- Start Settings Box -->
           <div class="p-5 bg-white rounded-lg">
             <h2 class="mt-0 mb-3">Site Control</h2>
             <p class="mt-0 mb-5 text-grey-color text-base">
               Control The Website If There Is Maintenance
             </p>
-            <div class="mb-3 between-flex">
+            <div class="mb-3 between-flex flex-wrap">
               <div>
                 <span>Website Control</span>
                 <p class="text-grey-color mt-1 mb-0 text-xs">
@@ -110,15 +122,22 @@
                 </label>
               </div>
             </div>
-            <textarea class="close-message " placeholder="Close Message Content"></textarea>
+            <textarea
+              class="close-message"
+              placeholder="Close Message Content"
+            ></textarea>
           </div>
           <!-- End Settings Box -->
           <!-- Start Settings Box -->
           <div class="p-5 bg-white rounded-lg">
             <h2 class="mt-0 mb-3">General Info</h2>
-            <p class="mt-0 mb-5 text-grey-color text-base">General Information About Your Account</p>
+            <p class="mt-0 mb-5 text-grey-color text-base">
+              General Information About Your Account
+            </p>
             <div class="mb-4">
-              <label class="text-sm text-grey-color block mb-2" for="first">First Name</label>
+              <label class="text-sm text-grey-color block mb-2" for="first"
+                >First Name</label
+              >
               <input
                 class="border-none border-[#ccc] p-2 rounded-md block w-full"
                 type="text"
@@ -127,7 +146,9 @@
               />
             </div>
             <div class="mb-4">
-              <label class="text-sm text-grey-color block mb-2" for="last">Last Name</label>
+              <label class="text-sm text-grey-color block mb-2" for="last"
+                >Last Name</label
+              >
               <input
                 class="border-none border-[#ccc] p-2 rounded-md block w-full"
                 id="last"
@@ -136,9 +157,11 @@
               />
             </div>
             <div>
-              <label class="text-sm text-grey-color block mb-2" for="email">Email</label>
+              <label class="text-sm text-grey-color block mb-2" for="email"
+                >Email</label
+              >
               <input
-                class="email border-none border-[#ccc] p-2 rounded-md  mr-3 cursor-not-allowed bg-gray-100 text-gray-400 inline-flex w-[calc(100%-80px)]"
+                class="email border-none border-[#ccc] p-2 rounded-md mr-3 cursor-not-allowed bg-gray-100 text-gray-400 inline-flex w-[calc(100%-80px)]"
                 id="email"
                 type="email"
                 value="o@nn.sa"
@@ -151,52 +174,90 @@
           <!-- Start Settings Box -->
           <div class="p-5 bg-white rounded-lg">
             <h2 class="mt-0 mb-3">Security Info</h2>
-            <p class="mt-0 mb-5 text-grey-color text-base">Security Information About Your Account</p>
+            <p class="mt-0 mb-5 text-grey-color text-base">
+              Security Information About Your Account
+            </p>
             <div class="sec-box mb-3 pb-3 between-flex border-b border-[#eee]">
               <div>
                 <span>Password</span>
-                <p class="text-grey-color mt-1 mb-0 text-xs">Last Change On 25/10/2021</p>
+                <p class="text-grey-color mt-1 mb-0 text-xs">
+                  Last Change On 25/10/2021
+                </p>
               </div>
-              <a class="button bg-blue-color text-white btn-shape " href="#">Change</a>
+              <a
+                class="button bg-blue-color text-white btn-shape text-base"
+                href="#"
+                >Change</a
+              >
             </div>
-            <div class="sec-box mb-4 pb-4 between-flex border-b border-[#eee]">
-              <div >
+            <div
+              class="sec-box sm:mb-4 sm:pb-4 between-flex gap-1 flex-wrap border-b border-[#eee]"
+            >
+              <div>
                 <span>Two-Factor Authentication</span>
-                <p class="text-grey-color mt-1 mb-0 text-xs">Enable/Disable The Feature</p>
+                <p class="text-grey-color mt-1 mb-0 text-xs">
+                  Enable/Disable The Feature
+                </p>
               </div>
               <label class="pb-3">
                 <input class="toggle-checkbox" type="checkbox" checked />
                 <div class="toggle-switch"></div>
               </label>
             </div>
-            <div class="sec-box between-flex  ">
+            <div class="sec-box between-flex gap-3 flex-wrap">
               <div>
                 <span>Devices</span>
-                <p class="text-grey-color mt-1 mb-0 text-xs">Check The Login Devices List</p>
+                <p class="text-grey-color mt-1 mb-0 text-xs">
+                  Check The Login Devices List
+                </p>
               </div>
-              <a class="bg-[#eee] text-black hover:text-white btn-shape hover:bg-blue-alt-color transition-all duration-300" href="#">Devices</a>
+              <a
+                class="bg-[#eee] text-black text-base hover:text-white btn-shape hover:bg-blue-alt-color transition-all duration-300"
+                href="#"
+                >Devices</a
+              >
             </div>
           </div>
           <!-- End Settings Box -->
           <!-- Start Settings Box -->
           <div class="social-boxes p-5 bg-white rounded-lg">
             <h2 class="mt-0 mb-3">Social Info</h2>
-            <p class="mt-0 mb-5 text-grey-color text-base">Social Media Information</p>
+            <p class="mt-0 mb-5 text-grey-color text-base">
+              Social Media Information
+            </p>
             <div class="flex items-center mb-4">
               <i class="fa-brands fa-twitter center-flex text-grey-color"></i>
-              <input class="w-full" type="text" placeholder="Twitter Username" />
+              <input
+                class="w-full"
+                type="text"
+                placeholder="Twitter Username"
+              />
             </div>
             <div class="flex items-center mb-4">
-              <i class="fa-brands fa-facebook-f center-flex text-grey-color"></i>
-              <input class="w-full" type="text" placeholder="Facebook Username" />
+              <i
+                class="fa-brands fa-facebook-f center-flex text-grey-color"
+              ></i>
+              <input
+                class="w-full"
+                type="text"
+                placeholder="Facebook Username"
+              />
             </div>
             <div class="flex items-center mb-4">
               <i class="fa-brands fa-linkedin center-flex text-grey-color"></i>
-              <input class="w-full" type="text" placeholder="Linkedin Username" />
+              <input
+                class="w-full"
+                type="text"
+                placeholder="Linkedin Username"
+              />
             </div>
             <div class="flex items-center mb-4">
               <i class="fa-brands fa-youtube center-flex text-grey-color"></i>
-              <input class="w-full" type="text" placeholder="Youtube Username" />
+              <input
+                class="w-full"
+                type="text"
+                placeholder="Youtube Username"
+              />
             </div>
           </div>
           <!-- End Settings Box -->
@@ -233,7 +294,9 @@
           <!-- Start Settings Box -->
           <div class="backup-control p-5 bg-white rounded-lg">
             <h2 class="mt-0 mb-3">Backup Manager</h2>
-            <p class="mt-0 mb-5 text-grey-color text-base">Control Backup Time And Location</p>
+            <p class="mt-0 mb-5 text-grey-color text-base">
+              Control Backup Time And Location
+            </p>
             <div class="date flex items-center mb-4">
               <input type="radio" name="time" id="daily" checked />
               <label for="daily">Daily</label>
@@ -246,7 +309,9 @@
               <input type="radio" name="time" id="monthly" />
               <label for="monthly">Monthly</label>
             </div>
-            <div class="servers flex items-center flex-wrap gap-3 md:flex-nowrap text-center border-t border-secandry pt-5">
+            <div
+              class="servers flex items-center flex-wrap gap-3 md:flex-nowrap text-center border-t border-secandry pt-5"
+            >
               <input type="radio" name="servers" id="server-one" />
               <div class="server mb-4 rounded-lg w-full">
                 <label class="block py-5 cursor-pointer" for="server-one">
